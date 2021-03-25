@@ -1,47 +1,184 @@
 
-
 /* START SERVICES SECTION   */
-#Service{
-   
-    font-family: 'Righteous', cursive;
-  }
-  
-  #Service h4 {
-      margin: 10px auto;
-      font-size: 20px;
-      color: rgb(20, 20, 20);
-      font-size: 1.6em; 
-  }
-  
-  #Service .round:hover h4{
-      color: #3002ff;
-      transition: color 2s;	
-     
-  }
-  #VisitBTN{
-    color: aliceblue;
-    background-color: #2e2e2e;
-    border-color: #000 ;
-  }
-  #VisitBTN:hover{
-    background-color: rgb(255, 255, 255);
-   color: rgb(0, 0, 0);
-   transform: translateY(8px);
-    transition: transform 0.3s ease-out;
-    border-color: #000 ;
-    transition: background-color 2s;	
-  }
-
+html{
+  scroll-behavior: smooth;
+}
   body{
 	margin: 0;
 	padding: 0;
 	background-color: #0e6cc4;
-	overflow-x:hidden;
-	overflow-y:hidden;
+  font-family: 'Source Sans Pro', cursive;
+}
+.button {
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button5 {
+    border: none;
+    color: white;
+    background-color: rgb(255,0,68);
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 0 #f9e506;
+    transition: ease-out 0.3s;
+    outline: none;
+    font-family: 'Source Sans Pro', sans-serif;
+	 letter-spacing: 2px;
+	 background-color: #25252a;
+  
+}
+.button1{
+    border-radius: 4px;  
+    background-color: #25252a;
+}
+.button1:hover{
+    box-shadow: inset 300px 0 0 0 #f9e506;
+  cursor: pointer;
+  color: black;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.button5:hover {
+  box-shadow: inset 300px 0 0 0 #f9e506;
+  cursor: pointer;
+  color: black;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Page Management section */
+section.pricing {
+  margin-top: 300px;
+  background: #007bff;
+  background: linear-gradient(to right, #0062E6, #33AEFF);
+}
+
+.pricing .card {
+  border: none;
+  border-radius: 1rem;
+  transition: all 0.2s;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.pricing hr {
+  margin: 1.5rem 0;
+}
+
+.pricing .card-title {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+}
+
+.pricing .card-price {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.pricing .card-price .period {
+  font-size: 0.8rem;
+}
+
+.pricing ul li {
+  margin-bottom: 1rem;
+}
+
+.pricing .text-muted {
+  opacity: 0.7;
+}
+
+.pricing .btn {
+  font-size: 80%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+.pricing .btn:hover {
+  font-size: 80%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  opacity: 0.7;
+  transition: all 0.2s;
+  background-color: #ff7d13;
+  color: #000000;
+}
+
+/* Hover Effects on Card */
+
+@media (min-width: 992px) {
+  .pricing .card:hover {
+    margin-top: -.25rem;
+    margin-bottom: .25rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+  }
+  .pricing .card:hover .btn {
+    opacity: 1;
+  }
+}
+
+/* Other Services section  */
+
+.item {
+    background: #fff;
+    text-align: center;
+    padding: 30px 25px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    transition: all .5s ease 0;
+    transition: all 0.5s ease 0s;
+}
+.item:hover{
+    background:#19f9ae;
+    -webkit-transition: all .5s ease 0;
+    transition: all .5s ease 0;
+    transition: all 0.5s ease 0s;
+}
+.item:hover .item, .item:hover span.icon{
+    background:#fff;
+    border-radius:10px;
+    transition: all .5s ease 0;
+    transition: all 0.5s ease 0s;
+}
+.item:hover h6, .item:hover p{
+    color:rgb(0, 0, 0);
+    transition: all .5s ease 0;
+    transition: all 0.5s ease 0s;
+}
+.item p{
+    font-size:15px;
+    line-height:26px;
+}
+.item h6 {
+    margin-bottom:20px;
+    color:#2f2f2f;
+}
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+}
+.footer a{
+  color: #fff;
+}
+.footer a:hover{
+  color: rgb(10, 234, 241);
 }
 
 /*waves****************************/
-
 
 .box {
 	position: fixed;
@@ -58,7 +195,7 @@
   position: absolute;
   top: 3%;
   left: 10%;
-  background: #0af;
+  background: rgb(0, 255, 34);       /* change the color*/
   width: 1500px;
   height: 1300px;
   margin-left: -150px;
@@ -71,13 +208,13 @@
 .wave.-three {
   animation: drift 7500ms infinite linear;
 	position: fixed;
-	background-color: #77daff;
+	background-color: #0ea8e0; /* change the color*/
 }
 
 .wave.-two {
   animation: drift 3000ms infinite linear;
   opacity: .1;
-  background: black;
+  background: rgb(202, 62, 62);  /* change the color*/
 	position: fixed;
 }
 
@@ -119,9 +256,9 @@
   -ms-flex-align: center;
   align-items: center;
 
-  background: #25a7d7;
-  background: -webkit-linear-gradient(#25a7d7, #2962FF);
-  background: linear-gradient(#25a7d7, #25a7d7);
+  background: #25a7d7;  /* change the color*/
+  background: -webkit-linear-gradient(#25a7d7, #2962FF);  /* change the color*/
+  background: linear-gradient(#25a7d7, #25a7d7);  /* change the color*/
 }
 
 .icon {
